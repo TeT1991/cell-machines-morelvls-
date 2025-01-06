@@ -19,6 +19,15 @@ public class SceneSwitcher : MonoBehaviour
     {
         sceneTransitionAnimtion.Play("TransitionStart");
         yield return new WaitForSeconds(sceneTransitionAnimtion.GetClip("TransitionStart").length);
-        SceneManager.LoadScene(sceneName);
+
+        if(SceneManager.GetActiveScene().name == "Level24")
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+       
     }
 }

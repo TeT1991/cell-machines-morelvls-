@@ -32,18 +32,18 @@ public class MovingBlock : Block
             }
         }
 
-        OneAxisBlock oneAxisBlock = HasMovableOneAxisBlock(blocksHitsInfo);
+        //OneAxisBlock oneAxisBlock = HasMovableOneAxisBlock(blocksHitsInfo);
 
-        Debug.Log(transform.localRotation.z);
-        //Debug.Log(oneAxisBlock.transform.rotation.z);
+        //Debug.Log(transform.localRotation.z);
+        ////Debug.Log(oneAxisBlock.transform.rotation.z);
 
 
-        if (oneAxisBlock != null && transform.right == Vector3.forward)
-        {
-            Debug.Log(oneAxisBlock.transform.rotation.z);
-            Destroy(oneAxisBlock.gameObject);
-            //return (int)Vector3.Distance(transform.position, oneAxisBlock.transform.position);
-        }
+        //if (oneAxisBlock != null && transform.right == Vector3.forward)
+        //{
+        //    Debug.Log(oneAxisBlock.transform.rotation.z);
+        //    Destroy(oneAxisBlock.gameObject);
+        //    //return (int)Vector3.Distance(transform.position, oneAxisBlock.transform.position);
+        //}
 
         Debug.Log("Blocks Count - " + blocksCount);
 

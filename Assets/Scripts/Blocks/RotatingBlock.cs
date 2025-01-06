@@ -11,7 +11,10 @@ public class RotatingBlock : Block
 
     protected override void Action()
     {
-        Invoke(nameof(RotateNearBlocks), _tickDuration / 2f);
+        if (this != null)
+        {
+            Invoke(nameof(RotateNearBlocks), _tickDuration / 2f);
+        }
     }
 
     private void RotateNearBlocks()
