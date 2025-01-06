@@ -8,7 +8,7 @@ public class OneAxisBlock : Block
     {
         base.OnEnable();
         BlockTicksProcessor.Instance.OnTickProcessed += ChangeConstaints;
-        Debug.Log(transform.forward);
+       
     }
 
     public override void Rotate()
