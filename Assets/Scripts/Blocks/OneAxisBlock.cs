@@ -9,7 +9,6 @@ public class OneAxisBlock : Block
         base.OnEnable();
         BlockTicksProcessor.Instance.OnTickProcessed += ChangeConstaints;
         Debug.Log(transform.forward);
-        transform.position = transform.forward * 2;
     }
 
     public override void Rotate()
