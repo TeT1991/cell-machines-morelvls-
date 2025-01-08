@@ -4,6 +4,7 @@ using DG.Tweening;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Block : MonoBehaviour
 {
+    public bool CanDrag = true;
     public bool IsDuplicated { private get; set; }
 
     protected Rigidbody2D BlockRb { get; private set; }

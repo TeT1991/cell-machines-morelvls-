@@ -34,7 +34,7 @@ public class BlocksMover : MonoBehaviour
         {
             _movingBlockTransform.position = WorldTouchPos - Vector3.forward;
 
-            if (Input.GetMouseButtonUp(0) )
+            if (Input.GetMouseButtonUp(0))
             {
                 if (CheckBlockClick(out _) || !CheckBlockPlacement())
                 {
@@ -78,7 +78,7 @@ public class BlocksMover : MonoBehaviour
         if (blockCollider != null)
             Debug.Log($"{blockCollider.name}");
         return (blockCollider != null);
-        
+
     }
 
     private void AdjustBlockPosition(Transform blockTransfrom)
@@ -101,9 +101,15 @@ public class BlocksMover : MonoBehaviour
             hitBlock = null;
             return false;
         }
-            Debug.Log($"{blockCollider.name}");
+        Debug.Log($"{blockCollider.name}");
 
         hitBlock = blockCollider.GetComponent<Block>();
+        if (hitBlock.CanDrag == false)
+        {
+            Debug.Log($"{blockCollider.name} CANT MOVE");
+            hitBlock = null;
+            return false;
+        }
         return true;
     }
 }
